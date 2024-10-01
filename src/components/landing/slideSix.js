@@ -15,7 +15,7 @@ const SlideSix = () => {
     return (
         <div className='bg-blue-100 dark:bg-black px-6 pb-16 pt-10'>
             {/* Outer Background remains the same */}
-            <div className="flex flex-col max-md:items-center justify-between border border-black py-10 px-16 bg-[rgb(37,150,190)] dark:border-white md:flex-row">
+            <div className="flex flex-col max-md:items-center justify-between border border-black py-10 px-16 bg-[rgb(184,180,180)] dark:border-white md:flex-row">
                 {/* Inner section with updated background */}
                 <div className="mb-4 md:mb-0 md:mr-4 max-md:text-center">
                     <h2 className="mb-2 text-4xl max-md:text-2xl font-black dark:text-white">Get Started</h2>
