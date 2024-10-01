@@ -14,7 +14,7 @@ const SlideFour = () => {
     const parsedYearData = JSON.parse(YearData);
 
     return (
-        <div className="dark:bg-black py-14">
+        <div className="bg-blue-100 dark:bg-black py-14">
             <div className="px-11 items-start justify-start text-start">
                 <div className="text-4xl max-md:text-2xl font-black dark:text-white">Pricing</div>
                 <p className="py-3 font-medium max-md:text-xs dark:text-white">Choose the right plan for your education and future</p>
@@ -38,3 +38,4 @@ const SlideFour = () => {
 };
 
 export default SlideFour;
+
