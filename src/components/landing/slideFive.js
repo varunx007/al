@@ -5,7 +5,7 @@ import { review, from, photoURL, profession} from '../../constants';
 
 const SlideFive = () => {
     return (
-     <div className='dark:bg-black'>
+     <div className='bg-blue-100 dark:bg-black'>
            <figure className="max-w-screen-md mx-auto py-16 flex flex-col items-center dark:bg-black">
             <div className="mb-4 flex items-center">
                 <Rating size="md">
@@ -34,3 +34,4 @@ const SlideFive = () => {
 };
 
 export default SlideFive;
+
