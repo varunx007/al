@@ -1,5 +1,5 @@
 import React from 'react';
-import slide from '../../res/img/slideOne.png'
+import slide from '../../res/img/slideOne.png';
 import { useNavigate } from "react-router-dom";
 
 const SlideOne = () => {
@@ -13,16 +13,14 @@ const SlideOne = () => {
         navigate("/signup");
     }
 
-
     return (
-        <div className="flex flex-col items-center dark:bg-black">
+        <div className="flex flex-col items-center bg-blue-100 dark:bg-black">
 
-            <h1 className="text-6xl font-black mt-20 max-md:text-3xl dark:text-white"> Personalized AI Learning </h1>
+            <h1 className="text-6xl font-black mt-20 max-md:text-3xl dark:text-white">Ai Course Generator</h1>
 
             <p className="text-center text-black mt-6 max-w-2xl font-medium max-md:text-xs dark:text-white">
-            Transform your learning experience with our AI-powered platform. 
-            Easily access engaging, personalized content tailored to your unique learning needs.
-
+                Revolutionize your learning journey with our AI Course Generator SaaS
+                Effortlessly create engaging and personalized courses tailored to your needs
             </p>
 
             <div className="flex space-x-4 mb-4 mt-6">
@@ -44,3 +42,4 @@ const SlideOne = () => {
 };
 
 export default SlideOne;
+
