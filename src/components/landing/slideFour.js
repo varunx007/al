@@ -21,16 +21,18 @@ const SlideFour = () => {
             </div>
             <div className="lg:flex py-10">
 
-                {/* Updated background to rgb(184,180,180) */}
-                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4 bg-[rgb(184,180,180)]">
+                {/* Applied background color only to this pricing plan box */}
+                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4" style={{ backgroundColor: 'rgb(184,180,180)' }}>
                     <PricingPlan data={parsedFreeData} />
                 </div>
 
-                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4 bg-[rgb(184,180,180)]">
+                {/* Applied background color only to this pricing plan box */}
+                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4" style={{ backgroundColor: 'rgb(184,180,180)' }}>
                     <PricingPlan data={parsedMonthData} />
                 </div>
 
-                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4 bg-[rgb(184,180,180)]">
+                {/* Applied background color only to this pricing plan box */}
+                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4" style={{ backgroundColor: 'rgb(184,180,180)' }}>
                     <PricingPlan data={parsedYearData} />
                 </div>
             </div>
@@ -39,4 +41,5 @@ const SlideFour = () => {
 };
 
 export default SlideFour;
+
 
