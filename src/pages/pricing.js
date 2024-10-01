@@ -10,7 +10,6 @@ import { Button, Card } from 'flowbite-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Pricing = () => {
-
     const { state } = useLocation();
     const { header } = state || false;
 
@@ -20,8 +19,8 @@ const Pricing = () => {
     const monthData = `{"type": "${MonthType}", "cost": "${MonthCost}", "time": "/${MonthTime}", "one": "Generate 10 Sub-Topics", "two": "Create Unlimited Course", "three": "Video & Theory Course", "four": "1 Month Access", "five": "Theory & Image Course"}`;
     const parsedMonthData = JSON.parse(monthData);
 
-    const YearData = `{"type": "${YearType}", "cost": "${YearCost}", "time": "/${YearTime}", "one": "Generate 10 Sub-Topics", "two": "Create Unlimited Course", "three": "Video & Theory Course", "four": "1 Year Access", "five": "Theory & Image Course"}`;
-    const parsedYearData = JSON.parse(YearData);
+    const yearData = `{"type": "${YearType}", "cost": "${YearCost}", "time": "/${YearTime}", "one": "Generate 10 Sub-Topics", "two": "Create Unlimited Course", "three": "Video & Theory Course", "four": "1 Year Access", "five": "Theory & Image Course"}`;
+    const parsedYearData = JSON.parse(yearData);
 
     const navigate = useNavigate();
 
@@ -54,47 +53,30 @@ const Pricing = () => {
         setExpandedItem(expandedItem === index ? null : index);
     };
 
-    const style = {
-        "root": {
-            "base": "max-w-sm max-md:max-w-xs flex rounded-none border border-black bg-white shadow-none dark:border-white dark:bg-black m-4",
-            "children": "flex h-full flex-col justify-center gap-3 p-5",
-            "horizontal": {
-                "off": "flex-col",
-                "on": "flex-col md:max-w-xl md:flex-row"
-            },
-            "href": "hover:bg-white dark:hover:bg-black"
-        },
-        "img": {
-            "base": "",
-            "horizontal": {
-                "off": "rounded-none",
-                "on": "h-96 w-full rounded-none object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-            }
-
-        }
-    }
-
     return (
         <div className='h-screen flex flex-col'>
             <Header isHome={header} className="sticky top-0 z-50" />
-            <div className='dark:bg-black flex-1'>
+            <div className='dark:bg-black flex-1 bg-blue-100'> {/* Slide background color */}
                 <div className='flex-1 flex flex-col items-center justify-center'>
                     <h1 className="text-6xl font-black mt-14 max-md:text-3xl dark:text-white">Pricing Plan</h1>
                     <p className="text-center text-black mt-6 max-w-2xl font-medium max-md:text-xs dark:text-white">
                         Choose the Perfect Plan for Your Success
                     </p>
                     <div className="lg:flex py-14">
-
-                        <div className="flex flex-col items-center justify-center lg:w-1/3 px-3  max-md:pt-4">
-                            <PricingPlan data={parsedFreeData} />
-                        </div>
-
-                        <div className="flex flex-col items-center justify-center lg:w-1/3 px-3  max-md:pt-4">
-                            <PricingPlan data={parsedMonthData} />
-                        </div>
-
                         <div className="flex flex-col items-center justify-center lg:w-1/3 px-3 max-md:pt-4">
-                            <PricingPlan data={parsedYearData} />
+                            <div className="bg-[rgb(184,180,180)] p-5 rounded-lg shadow-md"> {/* Free plan box */}
+                                <PricingPlan data={parsedFreeData} />
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center justify-center lg:w-1/3 px-3 max-md:pt-4">
+                            <div className="bg-[rgb(184,180,180)] p-5 rounded-lg shadow-md"> {/* Monthly plan box */}
+                                <PricingPlan data={parsedMonthData} />
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center justify-center lg:w-1/3 px-3 max-md:pt-4">
+                            <div className="bg-[rgb(184,180,180)] p-5 rounded-lg shadow-md"> {/* Yearly plan box */}
+                                <PricingPlan data={parsedYearData} />
+                            </div>
                         </div>
                     </div>
                     <div className="dark:bg-black pt-16">
@@ -102,28 +84,19 @@ const Pricing = () => {
                             <div className="text-4xl font-black dark:text-white max-md:text-2xl">Pricing Benefits</div>
                         </div>
                         <div className="lg:flex pt-10 max-md:py-14">
-
-                            <Card key={1} theme={style}>
+                            <Card key={1}>
                                 <FaInfinity className="text-4xl max-md:text-3xl dark:text-white" />
-                                <h5 className='text-xl font-black tracking-tight text-black dark:text-white'>
-                                    Flexible Pricing
-                                </h5>
+                                <h5 className='text-xl font-black tracking-tight text-black dark:text-white'>Flexible Pricing</h5>
                                 <p className='font-normal text-sm text-black dark:text-white'>Tailor costs to usage needs for optimal budgeting flexibility</p>
                             </Card>
-
-                            <Card key={2} theme={style}>
+                            <Card key={2}>
                                 <FaRankingStar className="text-4xl max-md:text-3xl dark:text-white" />
-                                <h5 className='text-xl font-black tracking-tight text-black dark:text-white'>
-                                    Upgrade Anytime
-                                </h5>
+                                <h5 className='text-xl font-black tracking-tight text-black dark:text-white'>Upgrade Anytime</h5>
                                 <p className='font-normal text-sm text-black dark:text-white'>Seamlessly scale plans to match evolving requirements at any moment</p>
                             </Card>
-
-                            <Card key={3} theme={style}>
-                                <GiCancel className="text-4xl max-md:text-3xl  dark:text-white" />
-                                <h5 className='text-xl font-black tracking-tight text-black dark:text-white'>
-                                    Cancel Subscription Anytime
-                                </h5>
+                            <Card key={3}>
+                                <GiCancel className="text-4xl max-md:text-3xl dark:text-white" />
+                                <h5 className='text-xl font-black tracking-tight text-black dark:text-white'>Cancel Subscription Anytime</h5>
                                 <p className='font-normal text-sm text-black dark:text-white'>Terminate subscription anytime, providing ultimate flexibility and user control</p>
                             </Card>
                         </div>
@@ -160,3 +133,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+
