@@ -19,17 +19,18 @@ const SlideFour = () => {
                 <div className="text-4xl max-md:text-2xl font-black dark:text-white">Pricing</div>
                 <p className="py-3 font-medium max-md:text-xs dark:text-white">Choose the right plan for your education and future</p>
             </div>
-            {/* Added inner background color with rgb(184,180,180) */}
-            <div className="lg:flex py-10 bg-[rgb(184,180,180)] dark:bg-[rgb(184,180,180)]">
-                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4">
+            <div className="lg:flex py-10">
+
+                {/* Updated bg to rgb(184,180,180) */}
+                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4 bg-[rgb(184,180,180)] rounded-lg p-6">
                     <PricingPlan data={parsedFreeData} />
                 </div>
 
-                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4">
+                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4 bg-[rgb(184,180,180)] rounded-lg p-6">
                     <PricingPlan data={parsedMonthData} />
                 </div>
 
-                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4">
+                <div className="flex flex-col items-center justify-center lg:w-1/3 max-md:pt-4 bg-[rgb(184,180,180)] rounded-lg p-6">
                     <PricingPlan data={parsedYearData} />
                 </div>
             </div>
@@ -38,6 +39,3 @@ const SlideFour = () => {
 };
 
 export default SlideFour;
-
-
-
