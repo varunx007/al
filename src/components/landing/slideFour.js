@@ -38,4 +38,5 @@ const SlideFour = () => {
 };
 
 export default SlideFour;
-same
+
+
