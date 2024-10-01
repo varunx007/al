@@ -1,6 +1,6 @@
 //BRAND
-export const name = 'AdeptLearn';
-export const company = 'AdeptLearn';
+export const name = 'a2zlearn';
+export const company = 'a2zlearn';
 export const websiteURL = 'https://al-green.vercel.app/';
 export const serverURL = 'https://enlightenai.onrender.com';
 export const logo = 'https://firebasestorage.googleapis.com/v0/b/enlightenai.appspot.com/o/EnlightenAI%20logo.png?alt=media&token=79f4df7d-6883-4e26-b257-0bc598984f81';
