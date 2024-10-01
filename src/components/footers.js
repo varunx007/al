@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Footers = () => {
   const storedTheme = sessionStorage.getItem('darkMode');
-
   const navigate = useNavigate();
+
   function redirectAbout() {
     navigate("/about");
   }
@@ -18,13 +18,12 @@ const Footers = () => {
   function redirectTerms() {
     navigate("/terms");
   }
-
   function redirectPrivacy() {
     navigate("/privacy");
   }
 
   return (
-    <Footer container className="shadow-none rounded-none dark:bg-black">
+    <Footer container className="shadow-none rounded-none bg-blue-100 dark:bg-black">
       <div className="w-full text-center">
         <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
           <Footer.Brand
@@ -35,13 +34,13 @@ const Footers = () => {
             <p className="text-black font-bold mx-4 dark:text-white" onClick={redirectAbout}>
               About
             </p>
-            <p className="text-black  font-bold  mx-4 dark:text-white" onClick={redirectPrivacy}>
+            <p className="text-black font-bold mx-4 dark:text-white" onClick={redirectPrivacy}>
               Privacy Policy
             </p>
-            <p className="text-black  font-bold  mx-4 dark:text-white " onClick={redirectTerms}>
+            <p className="text-black font-bold mx-4 dark:text-white" onClick={redirectTerms}>
               Terms
             </p>
-            <p className="text-black  font-bold  mx-4 dark:text-white" onClick={redirectContact}>
+            <p className="text-black font-bold mx-4 dark:text-white" onClick={redirectContact}>
               Contact
             </p>
           </Footer.LinkGroup>
@@ -59,3 +58,4 @@ const Footers = () => {
 };
 
 export default Footers;
+
