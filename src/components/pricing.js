@@ -151,7 +151,7 @@ const PricingPlan = (props) => {
             </ul>
             <button
                 onClick={redirectPayment}
-                className="inline-flex w-full justify-center dark:bg-white dark:text-black bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+                className="inline-flex w-full justify-center bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
             >
                 {props.data.button}
             </button>
@@ -160,6 +160,7 @@ const PricingPlan = (props) => {
 };
 
 export default PricingPlan;
+
 
 
 
