@@ -249,7 +249,7 @@ const Course = () => {
             body {
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
-                background-color: #fff;
+                background-color: #ebf8ff;
                 margin: 0;
                 display: flex;
                 justify-content: center;
