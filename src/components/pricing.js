@@ -152,11 +152,6 @@ const PricingPlan = (props) => {
             </ul>
             <button
                 onClick={redirectPayment}
-                className="inline-flex w-full justify-center dark:bg-white dark:text-black bg-black px-5 py-2.5 text-center text-sm font-bold text-white "
-            >{sessionStorage.getItem('auth') === null || sessionStorage.getItem('type') === 'free' ? "Get Started" : "Modify Plan"}
-            </button>
-        </Card>
-    );
-};
+                style={{ backgroundColor: 'rgb(37, 150, 190)' }}
+                className="inline-flex w-full justify-center dark:text-black px-5 py-2.5 text-center text-sm font
 
-export default PricingPlan;
