@@ -151,9 +151,8 @@ const PricingPlan = (props) => {
             </ul>
             <button
                 onClick={redirectPayment}
-                className="inline-flex w-full justify-center bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
-            >
-                {props.data.button}
+                className="inline-flex w-full justify-center dark:bg-white dark:text-black bg-black px-5 py-2.5 text-center text-sm font-bold text-white "
+            >{sessionStorage.getItem('auth') === null || sessionStorage.getItem('type') === 'free' ? "Get Started" : "Modify Plan"}
             </button>
         </Card>
     );
