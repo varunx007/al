@@ -3,8 +3,8 @@ import { Card } from 'flowbite-react';
 import { useNavigate } from 'react-router-dom';
 
 const PricingPlan = (props) => {
-
     const navigate = useNavigate();
+
     function redirectPayment() {
         if (sessionStorage.getItem('auth') === null || sessionStorage.getItem('type') === 'free') {
             navigate('/payment', { state: { plan: props.data.type } });
@@ -14,8 +14,13 @@ const PricingPlan = (props) => {
     }
 
     return (
-        <Card className='max-w-sm shadow-none border border-black rounded-none mt-3 px-14 py-5 dark:bg-black dark:border-white'>
-            <h5 className="mb-4 text-3xl max-md:text-2xl font-black text-black dark:text-white text-center">{props.data.type}</h5>
+        <Card 
+            style={{ backgroundColor: 'rgb(184, 180, 180)' }} 
+            className='max-w-sm shadow-none border border-black rounded-none mt-3 px-14 py-5 dark:border-white'
+        >
+            <h5 className="mb-4 text-3xl max-md:text-2xl font-black text-black dark:text-white text-center">
+                {props.data.type}
+            </h5>
             <div className="flex items-baseline text-gray-900 dark:text-white text-center justify-center">
                 <span className="text-3xl max-md:text-2xl font-semibold ">$</span>
                 <span className="text-5xl max-md:text-3xl font-extrabold tracking-tight">{props.data.cost}</span>
@@ -73,7 +78,6 @@ const PricingPlan = (props) => {
                 </li>
 
                 {props.data.type === 'Free Plan' ?
-
                     <>
                         <li className="flex space-x-3 line-through decoration-gray-500">
                             <svg
@@ -106,9 +110,7 @@ const PricingPlan = (props) => {
                             <span className="text-base max-md:text-xs font-normal leading-tight text-black dark:text-white">{props.data.three}</span>
                         </li>
                     </>
-
                     :
-
                     <>
                         <li className="flex space-x-3">
                             <svg
@@ -145,20 +147,19 @@ const PricingPlan = (props) => {
                             </span>
                         </li>
                     </>
-
                 }
-
-
             </ul>
             <button
                 onClick={redirectPayment}
-                className="inline-flex w-full justify-center dark:bg-white dark:text-black bg-black px-5 py-2.5 text-center text-sm font-bold text-white "
-            >{sessionStorage.getItem('auth') === null || sessionStorage.getItem('type') === 'free' ? "Get Started" : "Modify Plan"}
+                className="inline-flex w-full justify-center dark:bg-white dark:text-black bg-black px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            >
+                {props.data.button}
             </button>
         </Card>
     );
 };
 
 export default PricingPlan;
+
 
 
